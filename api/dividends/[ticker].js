@@ -1,3 +1,5 @@
+export const config = { runtime: 'nodejs20.x' };
+
 import { chromium } from "playwright-chromium";
 
 export default async function handler(req, res) {
@@ -39,5 +41,3 @@ export default async function handler(req, res) {
     res.status(500).json({ error: e.message });
   }
 }
-
-export const config = { runtime: 'nodejs20.x' };
